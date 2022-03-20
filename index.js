@@ -8,6 +8,19 @@ function mondayWork(task = 'go to the office') {
     return 'This Monday, I will ' + task + `.`
 }
 
-function wrapAdjective(innerFunction) {
-    return `You are ${innerFunction(par)}`
+// function wrapAdjective(visFlair = "*") {
+//     function innerFunction(text = "a dedicated programmer") {
+//         return `${text}
+//     }
+//     return `You are a ${visFlair}` + innerFunction(text) `${visFlair}`
+// }
+
+//call
+// wrapAdjective("*")("a dedicated programmer")
+
+function wrapAdjective(visFlair = "*") {
+    const adjectiveString = (adjective = "special") => {
+        return `You are ${visFlair}${adjective}${visFlair}!`
+    }
+    return adjectiveString
 }
